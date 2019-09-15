@@ -21,4 +21,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def index() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
   }
+
+  def helloWorld(name: String) = Action {
+    Ok(views.html.hello(name))
+  }
 }
